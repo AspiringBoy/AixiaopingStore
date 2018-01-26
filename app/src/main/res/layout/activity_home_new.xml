@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/tab_rg"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.axp.axpseller.views.custom.MyRadiobutton
+            android:id="@+id/main_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="首页"
+            android:textSize="12dp"
+            app:MydrawableTop="@drawable/selector_tab_home_mall"
+            app:drawableTopHeight="25dp"
+            app:drawableTopWidth="25dp" />
+
+        <com.axp.axpseller.views.custom.MyRadiobutton
+            android:id="@+id/order_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="订单"
+            android:textSize="12dp"
+            app:MydrawableTop="@drawable/selector_tab_order_mall"
+            app:drawableTopHeight="25dp"
+            app:drawableTopWidth="25dp" />
+
+        <com.axp.axpseller.views.custom.MyRadiobutton
+            android:id="@+id/chat_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="聊天"
+            android:textSize="12dp"
+            app:MydrawableTop="@drawable/selector_tab_chat_mall"
+            app:drawableTopHeight="25dp"
+            app:drawableTopWidth="25dp" />
+
+        <TextView
+            android:id="@+id/chat_un_read_count"
+            android:layout_width="15dp"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:text="8"
+            android:background="@drawable/system_msg_unread_count_bg"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="-28dp"
+            android:layout_height="15dp" />
+
+        <com.axp.axpseller.views.custom.MyRadiobutton
+            android:id="@+id/personal_center_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="资料"
+            android:textSize="12dp"
+            app:MydrawableTop="@drawable/selector_tab_person_mall"
+            app:drawableTopHeight="25dp"
+            app:drawableTopWidth="25dp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@id/container"
+        android:layout_width="match_parent"
+        android:layout_above="@id/tab_rg"
+        android:layout_height="match_parent"></FrameLayout>
+
+</RelativeLayout>

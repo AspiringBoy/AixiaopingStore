@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <com.axp.axpseller.views.custom.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/main_color"
+        app:leftIv="@drawable/icon_fanhuij"
+        app:titleColor="@color/white"
+        app:titleName="在线充值"
+        app:titleSize="17dp"></com.axp.axpseller.views.custom.CustomToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="积分余额:"
+                    android:textColor="@color/main_color"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/left_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0"
+                    android:textColor="@color/main_color"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="积分充值"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15dp" />
+
+                <com.axp.axpseller.views.custom.ScrollGridView
+                    android:id="@+id/recharge_card_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="12dp"
+                    android:horizontalSpacing="12dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="12dp"></com.axp.axpseller.views.custom.ScrollGridView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="其他金额"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/recharge_money_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入金额"
+                    android:inputType="number|numberDecimal"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textColorHint="#A8A8A8"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="可获积分"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/can_get_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="0积分"
+                    android:textColor="#666666"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/recharge_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/post_cover_btn_bg"
+                android:text="充值"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

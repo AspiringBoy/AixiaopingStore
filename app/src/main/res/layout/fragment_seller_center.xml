@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/my_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人中心"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h4" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/tx" />
+
+    <TextView
+        android:id="@+id/tv_seller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/h4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_seller_name"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/my_bgc"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_my_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="店铺资料 >"
+                android:textColor="@color/slateblue"
+                android:textSize="@dimen/h4" />
+
+            <TextView
+                android:id="@+id/tv_agency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="申请代理 >"
+                android:textColor="@color/slateblue"
+                android:textSize="@dimen/h4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_feeback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="帮助反馈 >"
+                android:textColor="@color/slateblue"
+                android:textSize="@dimen/h4" />
+
+            <TextView
+                android:id="@+id/tv_msg_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="消息设置 >"
+                android:textColor="@color/slateblue"
+                android:textSize="@dimen/h4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_loginout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/my_bgc">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

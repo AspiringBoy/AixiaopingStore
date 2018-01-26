@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="360dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/dialog_rec_bg">
+
+        <TextView
+            android:id="@+id/dialog_msg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="是否要推广该商品?"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/dialog_msg_tv"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/extension_introduce"
+            android:id="@+id/introduce_tv"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/btn_ll"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/main_text_color_black"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#dddddd" />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="我已了解"
+                android:textColor="@color/main_text_color_black"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@id/btn_ll"
+            android:background="#dddddd" />
+    </RelativeLayout>
+</LinearLayout>

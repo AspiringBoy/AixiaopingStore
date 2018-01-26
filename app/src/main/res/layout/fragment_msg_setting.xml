@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/msg_setting_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f96a48"
+        app:navigationIcon="@drawable/icon_fanhuij">
+
+        <TextView
+            android:id="@+id/msg_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="消息设置"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="新消息提示音"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_btn_new_msg_notice"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            app:sb_checked_color="#4cd964"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            app:sb_show_indicator="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="消息声音"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_btn_msg_voice"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            app:sb_checked_color="#4cd964"
+            app:sb_show_indicator="false" />
+    </RelativeLayout>
+</LinearLayout>

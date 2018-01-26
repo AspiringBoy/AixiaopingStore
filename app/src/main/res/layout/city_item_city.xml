@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_city_mTvCatalog"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#b9b9b9"
+        android:gravity="center"
+        android:padding="5dip"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/item_city_mTvCity"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center|left"
+        android:text="16sp"
+        android:padding="5dip" />
+
+</LinearLayout>

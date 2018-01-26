@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyRadiobutton">
+        <attr name="drawableTopWidth" format="dimension" />
+        <attr name="drawableTopHeight" format="dimension" />
+        <attr name="MydrawableTop" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomToolbar">
+        <attr name="leftIv" format="reference" />
+        <attr name="rightIv" format="reference" />
+        <attr name="titleSize" format="dimension|reference" />
+        <attr name="titleColor" format="color|reference" />
+        <attr name="titleName" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImgView">
+        <attr name="type" format="integer"/>//0:圆形 1:圆角矩形
+        <attr name="roundRadios" format="dimension" />//圆角大小
+    </declare-styleable>
+
+    <declare-styleable name="MyCircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+</resources>

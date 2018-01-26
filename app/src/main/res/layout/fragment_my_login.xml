@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/dl_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/axp_logo" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_layout_horizontal_margin"
+        android:layout_marginRight="@dimen/form_layout_horizontal_margin"
+        android:layout_marginTop="230dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/tv_name"
+                style="@style/Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/dl_zhanghao"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_login_name"
+                android:maxLength="20"
+                android:textColorHint="@color/lightgray"
+                android:textSize="@dimen/h8" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/darkgrey" />
+
+            <LinearLayout
+                android:id="@+id/ll_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line">
+
+                <EditText
+                    android:id="@+id/tv_pwd"
+                    style="@style/Widget.EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/dl_mima"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_login_pwd"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/lightgray"
+                    android:textSize="@dimen/h8" />
+
+                <ImageView
+                    android:id="@+id/iv_see"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/icon_yj_click" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_lines"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/ll_pwd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/tv_free_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pwd"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="18dp"
+                android:drawableLeft="@drawable/loading_wangjimima"
+                android:drawablePadding="6dp"
+                android:text="@string/free_register"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/h8" />
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ll_pwd"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="18dp"
+                android:drawableLeft="@drawable/dl_zuche"
+                android:drawablePadding="6dp"
+                android:text="@string/forget_password"
+                android:textSize="@dimen/h8" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_free_register"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/form_layout_horizontal_margin"
+                android:layout_marginRight="@dimen/form_layout_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/my_buttom"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h7" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

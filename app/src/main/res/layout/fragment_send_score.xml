@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical">
+
+    <com.axp.axpseller.views.custom.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/main_color"
+        app:leftIv="@drawable/icon_fanhuij"
+        app:titleColor="@color/white"
+        app:titleName="账号输入"
+        app:titleSize="17dp"></com.axp.axpseller.views.custom.CustomToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/recharge_offline_card_layer_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/login_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="赠送给"
+            android:textColor="#323232"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/receiver_name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入收取者的账号名称"
+            android:text=""
+            android:textColor="#323232"
+            android:textColorHint="#969696"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nxt_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/btn_main_color_low"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+
+</LinearLayout>

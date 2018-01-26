@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="190dp"
+    android:layout_height="105dp">
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:background="@drawable/kuang"
+        android:layout_height="105dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="4"
+            android:text="使用axp12224548645仍可以登录爱小屏用户板，且商家版账号不会被登出"
+            android:id="@+id/seller_information_pop_tv"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

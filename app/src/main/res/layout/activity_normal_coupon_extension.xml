@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical"
+    tools:context="com.axp.axpseller.activitys.sellerinfo.ScoreExtensionActivity">
+
+    <include layout="@layout/tool_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/good_base_msg_layout"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="商品类别" />
+
+                <TextView
+                    android:id="@+id/good_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:text="生活用品"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="优惠券价" />
+
+                <EditText
+                    android:id="@+id/pt_discount_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入拼团的优惠价格"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/good_type_rll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/good_type_tag"
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="商品型号" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/good_type_tag"
+                    android:background="@null"
+                    android:text="请选择一个或多个型号"
+                    android:textColor="#999999"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/post_num_rll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/post_num_tag"
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="推  广  费" />
+
+                <EditText
+                    android:id="@+id/post_num_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:inputType="number|numberDecimal"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/post_num_tag"
+                    android:background="@null"
+                    android:hint="请输入每张券给推广员的奖励佣金"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="发券数量" />
+
+                <EditText
+                    android:id="@+id/limit_num_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入发券的数量"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/main_line_color"
+                android:layout_height="0.5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="发券区域" />
+
+                <CheckBox
+                    android:id="@+id/around_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:button="@drawable/send_way_pw_cb_bg"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="周边"
+                    android:textColor="#222222"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/all_city_cb"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:button="@drawable/send_way_pw_cb_bg"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="全国"
+                    android:textColor="#222222"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/duration_time_rll"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="9dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/textAttrStyle"
+                    android:text="券有效期"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/end_time_tag"
+                    android:layout_marginLeft="12dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/duration_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="15dp"
+                    android:layout_toRightOf="@id/end_time_tag"
+                    android:layout_centerVertical="true"
+                    android:textColor="#999999"
+                    android:text="请选择券上架后的有效时间"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/post_extension_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/post_cover_btn_bg"
+                android:text="发布推广"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

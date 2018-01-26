@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/choose_type_pw_ll_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/all_extension_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部推广"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/all_city_product_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全国特产"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/normal_coupon_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通优惠券"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/active_coupon_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动优惠券"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/score_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分活动"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/sec_kill_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="秒杀活动"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/pintuan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/view_press_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拼团活动"
+            android:textColor="#222222"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</LinearLayout>

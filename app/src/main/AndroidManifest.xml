@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.Android.com/tools"
+    package="com.axp.axpseller"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 麦克风权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 照相的权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 读取短信验证码	可选 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- 录像需要的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Aixiaoping.AppTheme"
+        tools:replace="android:icon">
+
+        <!-- 友盟key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57457110e0f55ae769000312" />
+
+        <!-- QQ、微信 -->
+        <meta-data
+            android:name="QQ_APP_ID"
+            android:value="${QQ_APP_ID}" />
+        <meta-data
+            android:name="QQ_APP_KEY"
+            android:value="${QQ_APP_KEY}" />
+        <meta-data
+            android:name="WEXIN_APP_ID"
+            android:value="${WEXIN_APP_ID}" />
+        <meta-data
+            android:name="WEXIN_APP_APPSECRET"
+            android:value="${WEXIN_APP_APPSECRET}" />
+
+        <!-- Glide OKHttp集成 -->
+        <meta-data
+            android:name="com.axp.axpseller.core.BaseGlideModule"
+            android:value="GlideModule" />
+
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_API_KEY}" />
+
+        <!-- 个推配置的第三方参数属性 -->
+        <!--
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}" />
+        -->
+
+        <activity
+            android:name="com.payeco.android.plugin.PayecoPluginLoadingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 插件拍照界面 -->
+        <activity
+            android:name="com.payeco.android.plugin.PayecoCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.UnlockActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".demo.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatCaptureTheme" />
+        <activity
+            android:name=".core.ImageShowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 首页 -->
+        <activity
+            android:name=".activitys.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.ExChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.CommodityWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.ComeLoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 免单商品列表 -->
+        <activity
+            android:name=".activitys.mall.FreeGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 评价列表 -->
+        <activity
+            android:name=".activitys.mall.GoodsCommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 成为会员 -->
+        <activity
+            android:name=".activitys.mall.BecomeVipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.LiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 商家登录 -->
+        <activity
+            android:name=".activitys.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 申请退单 -->
+        <activity
+            android:name=".activitys.order.ApplyBackOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 退单列表 -->
+        <activity
+            android:name=".activitys.order.BackOrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 退单详情 -->
+        <activity
+            android:name=".activitys.order.BackOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 商家退单详情 -->
+        <activity
+            android:name=".activitys.sellerinfo.SellerHandlerBackOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 商家退单列表 -->
+        <activity
+            android:name=".activitys.sellerinfo.SellerHandlerBackOrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 遮掩物地图 -->
+        <activity
+            android:name=".activitys.mall.AmbitusSellerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 商家位置选择 -->
+        <activity
+            android:name=".activitys.mall.SellerAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 店铺列表 -->
+        <activity
+            android:name=".activitys.mall.SellerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 订单详情 -->
+        <activity
+            android:name=".activitys.order.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 评价晒单 -->
+        <activity
+            android:name=".activitys.order.EvaluateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activitys.LauncherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxd930ea5d5a258f4f" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitys.mall.Preferential99Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.mall.SpecialLocalProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".demo.DemoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activitys.mall.GoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerUnConfirmedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 商家版全部activity -->
+        <!-- 红包充值 -->
+        <activity
+            android:name=".activitys.sellerinfo.SellerEnvelopeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerAssetManagementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerRedPackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerInforActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SendRedPackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.OpenShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.InputInformationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 开店分类 -->
+        <activity
+            android:name=".activitys.sellerinfo.InputStoreTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 定位开店地址 -->
+        <activity
+            android:name=".activitys.sellerinfo.InputAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 选择开店地址 -->
+        <activity
+            android:name=".activitys.sellerinfo.InputChioseAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 审核状态 -->
+        <activity
+            android:name=".activitys.sellerinfo.InputStatusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.UploadLicenseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerChangeSuccessfulActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.SellerRegistSuccessfulActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 提现 -->
+
+        <activity
+            android:name=".activitys.sellerinfo.WithdrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 提现界面 -->
+        <activity
+            android:name=".activitys.sellerinfo.WithdrawDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 银行卡列表 -->
+        <activity
+            android:name=".activitys.sellerinfo.BankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.AddBankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.WithdrawInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.sellerinfo.WithdrawInfoForPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 订单列表 -->
+        <activity
+            android:name=".activitys.order.OrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+
+        <!-- 商家订单列表 -->
+        <activity
+            android:name=".activitys.sellerinfo.SellerOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.mall.GoodsSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".demo.WidgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatCaptureTheme" />
+
+        <!-- 地图Demo使用的Activity -->
+        <activity
+            android:name=".demo.MapDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".core.QRActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatCaptureTheme" />
+        <activity
+            android:name=".core.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".core.SaveMoneyWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 注册成功 -->
+        <activity
+            android:name=".activitys.RegisterSuccessfulActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 积分列表 -->
+        <activity
+            android:name=".activitys.user.MyScoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 设置 -->
+        <activity
+            android:name=".activitys.user.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 个人资料 -->
+        <activity
+            android:name=".activitys.user.PersonInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 消息列表 -->
+        <activity
+            android:name=".activitys.user.MyMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 我的提现 -->
+        <activity
+            android:name=".activitys.user.MyWithdrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 关闭锁屏 -->
+        <activity
+            android:name=".activitys.user.LockScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 商家预览 -->
+        <activity
+            android:name=".activitys.sellerinfo.ShopsPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 店铺预览 -->
+        <activity
+            android:name=".activitys.sellerinfo.GoodsPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 商家 -->
+        <activity
+            android:name=".activitys.user.MyStoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 免单券 -->
+        <activity
+            android:name=".activitys.user.ExemptActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 地址列表 -->
+        <activity
+            android:name=".activitys.user.MyAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 添加修改地址 -->
+        <activity
+            android:name=".activitys.user.MyAddressEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".activitys.user.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 选择性别 -->
+        <activity
+            android:name=".activitys.user.ChioseSexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 发送验证码 -->
+        <activity
+            android:name=".activitys.user.RetrieveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme">
+            >
+        </activity>
+        <!-- 名字编辑 -->
+        <activity
+            android:name=".activitys.user.NameEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme">
+            >
+        </activity>
+        <!-- 资料审核 -->
+        <activity
+            android:name=".activitys.user.MyDataVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 绑定联系人 -->
+        <activity
+            android:name=".activitys.user.BindingContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 我的粉丝 -->
+        <activity
+            android:name=".activitys.user.MyFansActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 城市列表 -->
+        <activity
+            android:name=".activitys.CityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 待兑换 -->
+        <activity
+            android:name=".activitys.sellerinfo.StayExchangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 待发货 -->
+        <activity
+            android:name=".activitys.sellerinfo.StayTakeOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 积分兑换 -->
+        <activity
+            android:name=".activitys.ScoreExchangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- 秒杀 -->
+        <activity
+            android:name=".activitys.SecondKillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <!-- -商品关注 -->
+        <activity
+            android:name=".activitys.user.GoodsConcernActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.user.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transinfoTheme" />
+        <!-- 地区列表 -->
+        <activity
+            android:name=".activitys.CityDistrictActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transinfoTheme" />
+
+        <!-- 商家详情 -->
+        <activity
+            android:name=".activitys.mall.SellerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- 确认订单 -->
+        <activity
+            android:name=".activitys.order.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 退单申请 -->
+        <activity
+            android:name=".activitys.sellerinfo.ChargebacKauditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aixiaoping.AppTheme" />
+        <activity
+            android:name=".activitys.LoginOptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.user.ReLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.mall.GoodsClassifiActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".DownloadImageService" />
+        <service android:name=".AthanasiaService" />
+        <service android:name=".RefushService" />
+
+        <!-- ###########################以下为第三方配置############################## -->
+
+
+        <!-- 百度地图 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- 个推 -->
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name=".PushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- QQ微信分享 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101732618" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <!-- 微信登录 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- alipay sdk end -->
+
+        <activity
+            android:name=".activitys.LiveDetails"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.LiveMaxActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activitys.sellerinfo.ExchangeExtensionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.ConversationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.axp.axpseller"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitys.StoreWebActivity" />
+        <activity android:name=".activitys.OrderMsgActivity" />
+        <activity android:name=".activitys.SystemMsgActivity" />
+        <activity android:name=".activitys.MsgHomeActivity" />
+        <activity android:name=".activitys.SystemMsgDtActivity" />
+        <activity android:name=".activitys.AssetsMsgDtActivity" />
+        <activity android:name=".activitys.OrderMsgDtActivity" />
+        <activity android:name=".activitys.MsgSettingActivity" />
+        <activity android:name=".activitys.TaoBaoActivity" />
+
+        <receiver
+            android:name=".RongIMReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.axp.axpseller.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+        <!-- IPC 365 END -->
+        <activity
+            android:name=".activitys.sellerinfo.StoreSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activitys.sellerinfo.GoodsManageActivity" />
+        <activity android:name=".activitys.sellerinfo.PostGoodActivity" />
+        <activity android:name=".activitys.sellerinfo.GoodDetailActivity" />
+        <activity
+            android:name=".activitys.sellerinfo.AddStockActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activitys.sellerinfo.ScoreExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.AllCityExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.SecKillExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.PtExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.NormalCouponExtensionActivity" />
+        <activity android:name=".activitys.user.ActiveCouponExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.MyExtensionActivity" />
+        <activity android:name=".activitys.sellerinfo.PreviewActivity" />
+        <activity android:name=".activitys.user.ScoreRechargeOnlineActivity" />
+        <activity android:name=".activitys.user.ScoreRechargeSuccessActivity" />
+        <activity android:name=".activitys.user.ScoreRechargeOffLineActivity" />
+        <activity android:name=".activitys.user.ScoreSendActivity" />
+        <activity android:name=".activitys.user.SendScoreDtActivity" />
+        <activity android:name=".activitys.user.SendScoreActivity" />
+        <activity android:name=".activitys.user.ScanToSendActivity" />
+        <activity android:name=".activitys.user.SendScoreQrActivity"></activity>
+    </application>
+
+</manifest>

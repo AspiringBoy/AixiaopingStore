@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foot_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.axp.axpseller.activitys.sellerinfo.StoreSettingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                app:image_scale_type="center_inside"
+                app:indicator_drawable_selected="@color/main_color"
+                app:indicator_drawable_unselected="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/web_site_rll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="网站链接:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/web_site_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/tag"
+                    android:background="@null"
+                    android:hint="可添加此图片点击跳转的链接"
+                    android:text=""
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_input" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/add_vd_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="添加视频"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/add_vd_tag"
+                    android:background="@null"
+                    android:text="店铺招牌位置添加视频展示 (选填)"
+                    android:textColor="#999999"
+                    android:textSize="12dp" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/is_add_vd_sb"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    app:sb_checked="false"
+                    app:sb_checked_color="#43f627"
+                    app:sb_show_indicator="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/is_add_vd_sb"
+                    android:text="添加"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vd_cover_rll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/vd_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="视频封面"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/vd_cover"
+                    android:background="@null"
+                    android:text="招牌视频封面图 (尺寸 xx*xx)"
+                    android:textColor="#999999"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/post_cover_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/post_cover_btn_bg"
+                    android:text="上传图片"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/vd_address_rll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="视频地址:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/vd_address_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@null"
+                    android:hint="可添加视频点击跳转的链接"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="318dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/store_logo_iv"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/logo" />
+
+                    <EditText
+                        android:id="@+id/store_name_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_toRightOf="@id/store_logo_iv"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="请添加店铺名称"
+                        android:maxLines="2"
+                        android:paddingRight="26dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#999999"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/open_time_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/store_name_edt"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/store_logo_iv"
+                        android:text="营业时间:"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/open_time_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/store_name_edt"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/open_time_tag"
+                        android:text="请选择时间范围"
+                        android:textColor="#999999"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/icon_input" />
+
+                    <RelativeLayout
+                        android:id="@+id/select_time_rll"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@id/open_time_tv"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="16dp"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/icon_drop_down" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_bg">
+
+                    <com.axp.axpseller.views.custom.ScrollEditText
+                        android:id="@+id/store_introduce_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:hint="请编辑您的店铺介绍"
+                        android:lineSpacingExtra="4dp"
+                        android:text=""
+                        android:textColorHint="#999999"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/store_introduce_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="10dp"
+                        android:text="0/500"
+                        android:textColor="#999999"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/address_rll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/store_address_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="店铺地址:"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/store_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@id/store_address_tag"
+                        android:text="     省     市     区"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/address_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/icon_position" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/store_address_dt_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="82dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@null"
+                    android:hint="您店铺地址的详细位置"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="联系电话:"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/phone_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:background="@null"
+                        android:hint="请输入您店铺的联系电话"
+                        android:textColor="@color/black"
+                        android:textColorHint="#999999"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/bottom_advert_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/advert_place_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tianjiaguangao" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/store_preview_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ec5901"
+                    android:gravity="center"
+                    android:text="预览"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/store_save_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ff7827"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

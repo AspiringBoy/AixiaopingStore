@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical"
+    tools:context="com.axp.axpseller.activitys.sellerinfo.ScoreExtensionActivity">
+
+    <include layout="@layout/tool_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/good_base_msg_layout"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="拼团人数" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:text="2人"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="拼团优惠" />
+
+                <EditText
+                    android:id="@+id/pt_discount_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:inputType="number|numberDecimal"
+                    android:hint="请输入拼团的优惠价格"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <LinearLayout
+                android:id="@+id/notice_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:focusable="true"
+                android:visibility="gone"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="提示:" />
+
+                <TextView
+                    android:id="@+id/notice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@null"
+                    android:text=""
+                    android:textColor="#ff2d47"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/notice_view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/good_type_rll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/good_type_tag"
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="商品型号" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/good_type_tag"
+                    android:background="@null"
+                    android:text="请选择一个或多个型号"
+                    android:textColor="#999999"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/post_num_rll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/post_num_tag"
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="发布数量" />
+
+                <EditText
+                    android:id="@+id/post_num_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/post_num_tag"
+                    android:background="@null"
+                    android:hint="请输入拼团活动商品的数量"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/is_limit_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="是否限购"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/is_limit_tag"
+                    android:background="@null"
+                    android:text="拼团购买数量限制"
+                    android:textColor="#999999"
+                    android:textSize="15dp" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/is_limit_sb"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    app:sb_checked="false"
+                    app:sb_checked_color="#43f627"
+                    app:sb_show_indicator="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/is_limit_sb"
+                    android:text="限购"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textAttrStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="限购数量" />
+
+                <EditText
+                    android:id="@+id/limit_num_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入限购数量 (每人限购几件)"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <include layout="@layout/two_ll_layout" />
+
+            <Button
+                android:id="@+id/post_extension_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/post_cover_btn_bg"
+                android:text="发布推广"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
